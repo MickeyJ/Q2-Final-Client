@@ -1,6 +1,5 @@
 app.controller('ModifyController', function ($scope, $http) {
-  var LOCAL_API = 'http://localhost:3000';
-  var REMOTE_API = 'http://q2-api.herokuapp.com';
+  var REMOTE_API = 'https://q2-api.herokuapp.com';
 
   loadUsers();
   loadProducts();

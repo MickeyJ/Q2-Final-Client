@@ -1,6 +1,5 @@
 app.controller('LoginController', function ($scope, $http, $location, $window, $cookies, ValidFactory) {
-  var LOCAL_API = 'http://localhost:3000';
-  var REMOTE_API = 'http://q2-api.herokuapp.com';
+  var REMOTE_API = 'https://q2-api.herokuapp.com';
   var Path = '/users/login';
   var regexEmail = /^([A-Za-z\._\-0-9])*[@]([A-Za-z\._\-0-9])*[\.]([A-Za-z]{2,4})$/;
   var regexPassword = /^(([a-zA-Z]+\d+)|(\d+[a-zA-Z]+))[a-zA-Z0-9]*$/;

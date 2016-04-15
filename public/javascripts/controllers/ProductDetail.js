@@ -1,6 +1,5 @@
 app.controller('ProductDetailController', function ($scope, $http, $window, $routeParams, CartFactory) {
-  var LOCAL_API = 'http://localhost:3000/products/';
-  var REMOTE_API = 'http://q2-api.herokuapp.com/products/';
+  var REMOTE_API = 'https://q2-api.herokuapp.com/products/';
 
   loadProductDetail();
 
