@@ -5,8 +5,7 @@ app.controller('ProductDetailController', function ($scope, $http, $window, $rou
   var wikiEnd = '&format=json';
 
   loadProductDetail();
-
-  $scope.title = 'Product Detail';
+  
   $scope.userID = $window.sessionStorage.getItem('user_id');
 
   $scope.addItem = CartFactory.addItemToCart;
