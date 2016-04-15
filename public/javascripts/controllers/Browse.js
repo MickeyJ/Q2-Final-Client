@@ -1,5 +1,5 @@
 app.controller('BrowseController', function ($scope, $http, $window, CartFactory) {
-  var LOCAL_API = 'http://q2-api.herokuapp.com/products';
+  var LOCAL_API = 'https://q2-api.herokuapp.com/products';
 
   loadProductData();
   
