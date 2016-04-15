@@ -13,7 +13,6 @@ app.controller('CartController', function ($scope, $http, $routeParams, $session
 
   if($scope.user || $scope.userName){
     $scope.getCart(userId).then(function(data){
-      console.log(data.data);
       $scope.orders = data.data;
       
     });

@@ -20,7 +20,7 @@ app.directive('fapCart', function($window, $interval, CartFactory){
             element.text('Cart [' + itemCount + '] $'+ cartTotal);
           });
         }
-      }, 500);
+      }, 100);
     }
   }
 });
