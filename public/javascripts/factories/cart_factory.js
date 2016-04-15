@@ -16,6 +16,7 @@ app.factory('CartFactory', function ($http) {
     removeItemFromCart: function (orderID) {
       return $http.delete('https://q2-api.herokuapp.com/orders/'+ orderID)
         .then(function (data) {
+          window.location.pathname = '/cart'
         });
     }
   }

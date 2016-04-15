@@ -4,12 +4,12 @@
   <div class="productInfo col-xs-6 col-sm-4 col-md-12 cart-item-box" ng-repeat="x in orders">
     <table class='table'>
       <tr >
-        <td class='col-md-2' id="itemName">{{x.name}}</td>
+        <td class='col-md-2 cartText'>{{x.name}}</td>
         <td class='col-md-3'>
           <img ng-src={{x.image_url}} width="50%" className="img-responsive"/>
         </td>
-        <td class='col-md-2' id="itemPrice">${{x.price}}</td>
-        <td class='col-md-6'>{{x.info}}</td>
+        <td class='col-md-2 cartText' id="itemPrice">${{x.price}}</td>
+        <td class='col-md-6 cartText'>{{x.info}}</td>
         <td>
           <button ng-click="removeItem(x.order_id)" class="btn btn-danger">X</button>
         </td>

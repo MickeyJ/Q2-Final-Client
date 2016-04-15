@@ -17,7 +17,7 @@ app.directive('fapCart', function($window, $interval, CartFactory){
               return a + b;
             });
             var itemCount = cart.data.length;
-            element.text('Cart [' + itemCount + '] $'+ cartTotal);
+            element.text('Items in Cart [ ' + itemCount + ' ] -- Total [ $'+ cartTotal +' ]');
           });
         }
       }, 100);
