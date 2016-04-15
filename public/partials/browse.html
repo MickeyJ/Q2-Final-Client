@@ -1,0 +1,13 @@
+<!--suppress HtmlUnknownTarget -->
+<section class="">
+    <div class="col-xs-6 col-sm-4 col-md-4 product-box" ng-repeat="x in products">
+        <h4 id="fruitNames">{{x.name}}</h4>
+        <img id="fruitPictures" src={{x.image_url}} width="90%" className="img-responsive" />
+        <h4>$ {{x.price}}</h4>
+        <p>{{x.info}}</p>
+        <button ng-if="userID" ng-click="addItem(userID, x.product_id)" class="btn btn-success">
+            Add Item
+        </button>
+        <a class="btn btn-info" href="/product/{{x.product_id}}">View Details</a>
+    </div>
+</section>

@@ -1,0 +1,11 @@
+
+<div class="formBox col-md-4 col-md-offset-4">
+  <h2>{{title}}</h2>
+  <span class="form-error">{{error}}</span>
+  <form class="form-group" ng-submit="adminSignup(name, email, password)">
+    <input id="nameLogin" ng-change="validName(name)"  class="form-control" type="text" ng-model="name" placeholder="Name">
+    <input id="emailLogin" ng-change="validEmail(email)"  class="form-control" type="text" ng-model="email" placeholder="Email">
+    <input id="passwordLogin" ng-change="validPassword(password)"  class="form-control" type="password" ng-model="password" placeholder="Password">
+    <button class="btn btn-info">Sign up</button>
+  </form>
+</div>

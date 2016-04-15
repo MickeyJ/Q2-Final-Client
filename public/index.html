@@ -1,34 +1,61 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="app">
 <head>
-
-  <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <title>Placeholder</title>
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-  <link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="/stylesheets/style.css">
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
+  <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
+  <link rel="stylesheet" href="/stylesheets/main.css">
 
   <!-- Angular -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular-route.min.js"></script>
-  <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular-animate.min.js"></script>-->
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.0/angular-cookies.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.10/ngStorage.min.js"></script>
   <base href="/">
-
 </head>
 <body ng-cloak>
+<div class="container-fluid wrapper">
+  <section id="top-page">
+    <header>
+      <h1 fap-site-name></h1>
+      <fap-cart class="cart-total"></fap-cart>
+    </header>
 
-<ng-view></ng-view>
+    <nav ng-controller="CartController">
+      <a href="/">Home</a >
+      <a href="/signup" ng-if="!userName">Signup</a >
+      <a href="/login" ng-if="!userName">Login</a >
+      <a href="/admin" ng-if="!userName">Admin</a >
+      <a href="/browse" >Browse</a >
+      <a href="/cart" ng-if="userName">Cart</a >
+      <a href="/manage-data" ng-if="userAdmin">Manage-Data</a >
+    </nav>
+  </section>
 
-<script src="/javascripts/module.js"></script>
-<script src="/javascripts/controllers/mainController.js"></script>
-<script src="/javascripts/routes.js"></script>
+  <main>
+    <ng-view></ng-view>
+  </main>
 
+  <footer>
+    <span>&copy; 2015</span>
+    <span fap-site-name></span>
+  </footer>
+
+</div>
+<script src="./javascripts/module.js"></script>
+<script src="./javascripts/factories/cart_factory.js"></script >
+<script src="./javascripts/factories/inputValid_factory.js"></script >
+<script src="./javascripts/controllers/Home.js"></script>
+<script src="./javascripts/controllers/Admin.js"></script>
+<script src="./javascripts/controllers/Signup.js"></script>
+<script src="./javascripts/controllers/Login.js"></script>
+<script src="./javascripts/controllers/Browse.js"></script>
+<script src="./javascripts/controllers/Cart.js"></script>
+<script src="./javascripts/controllers/ProductDetail.js"></script>
+<script src="./javascripts/controllers/Modify.js"></script>
+<script src="./javascripts/routes.js"></script>
+<script src="./javascripts/directives/site_name.js"></script>
+<script src="./javascripts/directives/cart_link.js"></script>
 </body>
 </html>

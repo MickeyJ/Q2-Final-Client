@@ -1,0 +1,14 @@
+<!--suppress HtmlUnknownTarget -->
+
+<section class="row product-box" >
+  <div id="productView" >
+    <h4 >{{product.name}}</h4 >
+    <img ng-src={{product.image_url}} width="30%" className="img-responsive" />
+    <h4 >${{product.price}}</h4 >
+    <p >{{product.info}}</p >
+    <button class="btn btn-success buttonAdjustment" ng-if="userID" ng-click="addItem(userID, product.product_id)" >
+      Add Item
+    </button >
+    <a class="btn btn-info buttonAdjustment" href="/browse" >Continue Shopping</a >
+  </div >
+</section >
